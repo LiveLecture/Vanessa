@@ -1,56 +1,57 @@
-<?php require_once("inc/session_allgemein.php"); ?>
-
+<?php
+	require_once("inc/check_allgemein.php");
+	$active = "about";
+?>
 
 <!DOCTYPE html>
 <html>
 
-<?php include("inc/head.php"); ?>
+	<?php include("inc/head.php"); ?>
 
-<body>
+	<body>
 
-<?php
-if (!isset($_SESSION["login"])) {
-    include("inc/navbar_loggedout.php");
-} else {
-    switch (isset($_SESSION["login"])) {
-        case 1:
-            $_SESSION ["login"] = 1;
-            include("inc/navbar_loggedin_dozent.php");
-            break;
-        case 2:
-            $_SESSION ["login"] = 2;
-            include("inc/navbar_loggedin_admin.php");
-            break;
-    }
-}
-?>
+		<?php
+			include("inc/navbar_allgemein.php");
+		?>
 
-<div id="about" class="container panel hauptbereich seite-fuellen">
-    <h1 class="panel-heading col-sm-offset-4 col-sm-4 text-center">About us</h1>
+		<div id="about" class="container panel hauptbereich seite-fuellen">
+			<h1 class="panel-heading col-sm-offset-4 col-sm-4">About us</h1>
 
-    <div class="panel-body col-sm-12">
-        <p>
-            Unser Team besteht aus drei Studentinnen des Studiengangs Online-Medien-Management an, die im
-            Web-/Medienprojekt dieses Abstimmungstool für Dozenten entwickelt hat. Auf unserer Website haben Dozenten
-            die Möglichkeit mit den Studierenden in Echtzeit zu interagieren. Dabei bekommt jeder Dozent persönliche Zugangsdaten,
-            mit denen er sich in seinem LiveLecture-Bereich bewegen kann. Es besteht die Möglichkeit für jede Lehrveranstaltung
-            beliebig viele Umfragen anzulegen und diese in der Lehrveranstaltung live freizuschalten. Dabei kann vom Dozent
-            zusätzlich ein Bild hochgeladen werden, das die Frage der Abstimmung unterstützt. Der Nutzen der Lehrveranstaltung
-            kann durch LiveLecture gesteigert werden, indem der Dozent die Studierenden aktiv in die Lehrveranstaltung miteinbezieht
-            und damit die Motivation zur allgemeinen Beteiligung steigert. Zudem kann er die Inhalte seiner Lehrveranstaltung an den,
-            durch die Umfragen gezeigten Wissensstand der Studierenden anpassen und ebenso die bisherigen Resultate analysieren.
-            Ebenso eignet sich dieses Tool zu Evaluationszwecken, da die Studierenden unabhängig, schnell und anonym ihre
-            Meinung zu Themen äußern können.
-        </p>
+			<div class="panel-body col-sm-12">
+				<p>
+					Unser Team besteht aus drei Studentinnen, des Studiengangs Online-Medien-Management, an der
+					Hochschule der
+					Medien. Hier haben Sie als Dozent die Möglichkeit über verschiedene Themen mit den Studierenden in
+					Echtzeit
+					zu interagieren. Wichtig dabei ist, dass jedem Studierenden ein Zugang zu Live-Lecture gewährt wird,
+					der an
+					der aktuellen Lehrveranstaltung teilnimmt. Somit können Sie den Nutzen ihrer eigenen
+					Lehrveranstaltung
+					steigern und direkt die aktuelle Relevanz ihrer vorgestellten Themen erkennen, als auch die Struktur
+					ihrer
+					Veranstaltung auf die Bedürfnisse und Wünsche der Studierenden anpassen. Mit dem Resultat einer
+					jeden
+					Lehrveranstaltung wird Ihnen als Dozent die Möglichkeit eingeräumt, Ihre Vorlesungen so effektiv wie
+					möglich
+					zu gestalten. Damit arbeiten Sie intensiv und stetig an der Effizienz ihrer eigen gestalteten
+					Lehrveranstaltung, individuell angepasst auf den jeweiligen Kurs. Ebenso können Analysen der
+					bisherigen
+					Resultate durchgeführt werden, die als Grundlage für die Weiterentwicklung der Veranstaltung dienen.
+					Es
+					bleibt dem Nutzer offen für welche Zwecke er Live-Lecture in seine Veranstaltungeneinbinden möchte.
+					Beispielsweise können Sie durch den gezielten Einsatz von Live-Lecture den aktuellen Wissensstand
+					ihres
+					Kurses bestimmen und dadurch Ihre Inhalte für jedes Semester neu anpassen.
+				</p>
 
-    </div>
+			</div>
+		</div>
 
-</div>
+		<?php include("inc/footer.php") ?>
 
-<?php include("inc/footer.php") ?>
-
-</body>
+	</body>
 </html>
+
 
 
 
