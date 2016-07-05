@@ -1,5 +1,5 @@
 <?php
-	require_once("Data.php");
+	require_once("Mapper/Data.php");
 
 	class DataManager {
 
@@ -25,4 +25,5 @@
 			$this->pdo = null;
 		}
 	}
+
 ?>
