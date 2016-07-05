@@ -1,8 +1,8 @@
 <?php
-	require_once("inc/logout_check.php");
-	
+	require_once("inc/check_logout.php");
+
 	require_once("Mapper/ErrorHandler.php");
-	
+
 	$errorHandler = new ErrorHandler();
 	$error = $errorHandler->getError("login");
 ?>
@@ -19,14 +19,9 @@
 		<?php include("inc/fehlermeldung.php") ?>
 
 		<div class="container panel hauptbereich">
-
-			<h1 class="panel-heading">Willkomen auf LiveLecture!</h1>
+			<h2 class="panel-heading">Login</h2>
 
 			<form class="form-horizontal" role="form" action="login_do.php" method="post">
-
-
-				<h3 class="panel-heading">Login</h3>
-
 
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="login">Benutzername:</label>
